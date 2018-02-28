@@ -1,0 +1,44 @@
+._1sY_lrQN1d12XDjNupLEHD{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
+html,body{
+    padding: 0;
+    margin: 0;
+    background-color: red;
+}
+ul,li{
+   list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+i {
+  display: inline-block;
+}
+.layer {
+  width: 600px;
+  height: 200px;
+  background-color: #639;
+}
+.layer div {
+  width: 400px;
+  height: 400px;
+  background: url(www.mydarksea.comimages/bg1-8e97cd92.jpg) 100% no-repeat;
+}
+body {
+  background-color: #f66;
+}
+/*# sourceMappingURL=src/compontants/layer/layer.css.map */
+/*# sourceMappingURL=style.css.map*/

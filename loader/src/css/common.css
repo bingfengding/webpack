@@ -1,0 +1,16 @@
+@import "./flex.css";
+*{
+    box-sizing: border-box;
+
+}
+html,body{
+    padding: 0;
+    margin: 0;
+    background-color: red;
+}
+ul,li{
+   list-style: none;
+}
+a{
+    text-decoration: none;
+}

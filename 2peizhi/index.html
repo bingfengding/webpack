@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- <sc（防止报错）ript src="< （防止报错）%=htmlWebpackPlugin.files.chunks.demo.entry %（防止报错）>"></sc（防止报错）ript>-->
+
+</head>
+<body>
+ <!--由于webpack打包动态改变，因此引用需要使用对应插件进行，html-webpack-plugin  -->
+
+<!--可以直接在这里通过 title内的 这种方式引用-->
+ <%= htmlWebpackPlugin.options.date %>
+ <!--这里就类似于使用了js，取值需要加等号，使用方法的话去掉等号-->
+<%  for(var key in htmlWebpackPlugin){%>
+    <%= key %>:<%= htmlWebpackPlugin[key] %>
+ <% }%>
+<!--便利发现里面有 files，options 这2个，因此对这2个进行再次便利-->
+
+ <%  for(var key in htmlWebpackPlugin.files){%>
+ <%= key %>:<%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+ <% }%>
+
+ <hr>
+
+ <%  for(var key in htmlWebpackPlugin.options){%>
+ <%= key %>:<%= JSON.stringify(htmlWebpackPlugin.options[key]) %>
+ <% }%>
+<div><!-- <script src="< （防止报错）%=htmlWebpackPlugin.files.chunks.demo.entry %（防止报错）>"></script>-->可以通过这个方式引入</div>
+ <!--如果依照这种方式引入，那么配置文件内的inject就需要修改为false-->
+
+</html>
